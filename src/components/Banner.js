@@ -37,20 +37,20 @@ const Banner = () => {
             <header
                 className="banner"
                 style={{
-                    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
+                    backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
                     backgroundPosition: "top center",
-                    backgroundSixe: "hover"
+                    backgroundSixe: "cover"
                 }}
             > 
                 <div className="banner_contents">
-                    <h1 className="banner_title">{ movie.title || movie.name || movie.original_name }</h1>
+                    <h1 className="banner_title">{ movie?.title || movie?.name || movie?.original_name }</h1>
                     <div className="banner_buttons">
                         <button className="banner_button play" onClick={() => setIsClicked(true)}>Play</button>
                         <button className="banner_button info">More Information</button>
     
                     </div>
     
-                    <h1 className="banner_description">{truncate(movie.overview, 100)}</h1>
+                    <h1 className="banner_description">{truncate(movie?.overview, 100)}</h1>
                 </div>  
                 <div className="banner-fadeBottom" />
             </header>

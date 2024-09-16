@@ -26,6 +26,7 @@ const Row = ({ isLargeRow, title, fetchUrl, id}) => {
         const request = await axios.get(fetchUrl);
         console.log('request', request);
         setMovies(request.data.results);
+        return request;
     }
 
     const handleClick = (movie) => {
