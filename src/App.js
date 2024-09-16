@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path={`${process.env.PUBLIC_URL}/`} element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path=":movieId" element={<DetailPage />} />
           <Route path="search" element={<SearchPage />} />
